@@ -41,15 +41,14 @@ function blowUp(userInput) {
     return newString
 }
 
-while (true) {
-  const userInput = prompt("Enter a String that you want to blow up: ");
-  if (userInput.value !== null) {
-    const finalString = blowUp(userInput)
-    console.log(`The blown up string is: ${finalString}`)
-  } else {
-    console.log('Invalid Input')
-    break
-  }
+
+const userInput = prompt("Enter a String that you want to blow up: ");
+if (userInput.value !== null) {
+  const finalString = blowUp(userInput)
+  console.log(`The blown up string is: ${finalString}`)
+} else {
+  console.log('Invalid Input')
+  break
 }
 
 console.log('\nDone.')
