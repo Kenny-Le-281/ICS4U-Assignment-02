@@ -6,6 +6,7 @@
 * Since:   2024-03-29
 */
 
+
 import { createPrompt } from 'bun-promptx'
 
 function isDigit(char: string): boolean {
@@ -39,12 +40,10 @@ function blowUp(input: string) {
     return newString
 }
 
-let userInput = createPrompt("Enter a string you'd like to blow up: ");
-
 let newString: string = "";
-if (userInput !== null) {
-    let newString = blowUp(userInput);
-    console.log(newString);
+let inputResult = createPrompt("Enter a String that you want to blow up: ");
+if (inputResult.value !== null) {
+    let input: string = inputResult.value;
+    newString = blowUp(input);
 }
-
 console.log(newString);
