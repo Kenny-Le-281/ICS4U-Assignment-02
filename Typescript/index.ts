@@ -14,11 +14,12 @@ function isDigit(char: string): boolean {
 }
 
 
-function blowUp(input: string) {
+function blowUp(userInput) {
     let newString = ""
 
     for (let counter1 = 0; counter1 < input.length; counter1++) {
-        if (isDigit(input[counter1])) { // Checks if value is a digit
+        // Checks if value is a digit
+        if (isDigit(input[counter1])) {
             // Checks if next digit is also a number
             if (isDigit(input[counter1 + 1])) { 
               // If yes it ignores the previous number
@@ -40,10 +41,16 @@ function blowUp(input: string) {
     return newString
 }
 
-let newString: string = "";
-let inputResult = createPrompt("Enter a String that you want to blow up: ");
-if (inputResult.value !== null) {
-    let input: string = inputResult.value;
-    newString = blowUp(input);
+while (true) {
+  const userInput = prompt("Enter a String that you want to blow up: ");
+  if (userInput.value !== null) {
+    console.log('Invalid Input')
+    break
+  } else {
+    const finalString = blowUp(userInput)
+    console.log(`The blown up string is: ${finalString}`)
+    break
+  }
 }
-console.log(newString);
+
+console.log('\nDone.')
