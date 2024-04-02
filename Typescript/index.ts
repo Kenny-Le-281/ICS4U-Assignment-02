@@ -6,13 +6,12 @@
 * Since:   2024-03-29
 */
 
-
 import { createPrompt } from 'bun-promptx'
 
+// Function determines whether a chracter represets a digit
 function isDigit(char: string): boolean {
   return !isNaN(parseInt(char));
 }
-
 
 function blowUp(userInput) {
     let newString = ""
