@@ -47,7 +47,6 @@ if (userInput.value !== null) {
   console.log(`The blown up string is: ${finalString}`)
 } else {
   console.log('Invalid Input')
-  break
 }
 
 console.log('\nDone.')
