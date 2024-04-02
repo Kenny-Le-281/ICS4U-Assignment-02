@@ -14,7 +14,7 @@ function isDigit(char: string): boolean {
 }
 
 function blowUp(userInput) {
-    let newString = ""
+    let blownUpString = ""
 
     for (let counter1 = 0; counter1 < userInput.length; counter1++) {
         // Checks if value is a digit
