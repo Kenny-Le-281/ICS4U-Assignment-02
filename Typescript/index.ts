@@ -45,10 +45,10 @@ while (true) {
   const userInput = prompt("Enter a String that you want to blow up: ");
   if (userInput.value !== null) {
     let input: string = userInput.value;
-  } else {
     const finalString = blowUp(userInput)
     console.log(`The blown up string is: ${finalString}`)
-    break
+  } else {
+    console.log('Invalid Input')
   }
 }
 
