@@ -14,23 +14,23 @@ function isDigit(char: string): boolean {
 }
 
 
-function blowUp(input: string) {
+function blowUp(userInput) {
     let newString = ""
 
-    for (let counter1 = 0; counter1 < input.length; counter1++) {
+    for (let counter1 = 0; counter1 < userInput.length; counter1++) {
         // Checks if value is a digit
-        if (isDigit(input[counter1])) {
+        if (isDigit(userInput[counter1])) {
             // Checks if next digit is also a number
-            if (isDigit(input[counter1 + 1])) { 
+            if (isDigit(userInput[counter1 + 1])) { 
               // If yes it ignores the previous number
               continue 
             }
             else {
               // Multiplies letters by their respected values
-              let mulitplier = parseInt(input[counter1])
+              let mulitplier = parseInt(userInput[counter1])
               for (let counter2 = 0; counter2 < mulitplier; counter2++) {
                 // Appends characters to a new string
-                newString += input[counter1 + 1] 
+                newString += userInput[counter1 + 1] 
               }
           }
         }
@@ -44,11 +44,11 @@ function blowUp(input: string) {
 while (true) {
   const userInput = prompt("Enter a String that you want to blow up: ");
   if (userInput.value !== null) {
-    let input: string = userInput.value
-    const finalString = blowUp(input)
+    const finalString = blowUp(userInput)
     console.log(`The blown up string is: ${finalString}`)
   } else {
     console.log('Invalid Input')
+    break
   }
 }
 
