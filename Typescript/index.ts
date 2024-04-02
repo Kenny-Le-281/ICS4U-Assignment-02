@@ -14,7 +14,7 @@ function isDigit(char: string): boolean {
 }
 
 
-function blowUp(input) {
+function blowUp(input: string) {
     let newString = ""
 
     for (let counter1 = 0; counter1 < input.length; counter1++) {
@@ -44,7 +44,7 @@ function blowUp(input) {
 while (true) {
   const userInput = prompt("Enter a String that you want to blow up: ");
   if (userInput.value !== null) {
-    let input: string = userInput.value;
+    let input: string = userInput.value
     const finalString = blowUp(input)
     console.log(`The blown up string is: ${finalString}`)
   } else {
