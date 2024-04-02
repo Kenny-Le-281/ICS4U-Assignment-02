@@ -41,6 +41,7 @@ function blowUp(input: string) {
 
 let userInput = createPrompt("Enter a string you'd like to blow up: ");
 
+let newString: string = "";
 if (userInput !== null) {
     let newString = blowUp(userInput);
     console.log(newString);
