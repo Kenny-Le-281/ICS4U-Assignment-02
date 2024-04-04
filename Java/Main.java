@@ -36,7 +36,7 @@ public class Main {
 
         for (int counter1 = 0; counter1 < userInput.length(); counter1++) {
             // Checks if value is a digit
-            if (isDigit(userInput.charAt(counter1))) {
+            if (isDigit(userInput(counter1))) {
                 // Checks if next character is also a number
                 if (counter1 + 1 < userInput.length() && isDigit(userInput.charAt(counter1 + 1))) {
                     // If yes, ignore the previous number
@@ -47,12 +47,11 @@ public class Main {
                     for (int counter2 = 0; counter2 < multiplier; counter2++) {
                         // Appends characters to a new string 
                         // the same amount of times as the digit before it
-                        blownUpString.append(userInput.charAt(counter1 + 1));
+                        blownUpString.append(userInput(counter1 + 1));
                     }
                 }
             } else {
                 // If value isn't a digit, append it to the new string
-                // blownUpString.append(userInput.charAt(i));
                 continue;
             }
         }
@@ -69,6 +68,7 @@ public class Main {
         System.out.print("Enter a String that you want to blow up: ");
         String userInput = scanner.nextLine();
 
+        // Checks that user input is not empy then proceeds
         if (!userInput.isEmpty()) {
             String finalString = blowUp(userInput);
             System.out.println("The blown up string is: " + finalString);
