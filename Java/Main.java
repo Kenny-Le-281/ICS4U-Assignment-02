@@ -9,7 +9,7 @@
 import java.util.Scanner;
 
 /**
- * This program blows up a string into letters
+ * This program blows up a string into letters.
  *
  * @version 1.0
  * @since 2024-03-29
@@ -18,7 +18,7 @@ final class Main {
     /**
      * Determines whether a character represents a digit.
      *
-     * @param character The character to check
+     * @param checkCharacter The character to check
      * @return true if the character is a digit, otherwise false
      */
     public static boolean isDigit(char checkCharacter) {
@@ -38,13 +38,14 @@ final class Main {
             // Checks to see if the specific character is a digit
             if (isDigit(userInput.charAt(counter1))) {
                 // Checks if next character is also a number
-                if (counter1 + 1 < userInput.length() 
+                if (counter1 + 1 < userInput.length()
                     && isDigit(userInput.charAt(counter1 + 1))) {
                     // If yes, ignore the previous number
                     continue;
                 } else {
                     // Multiplies letters by the digit
-                    final int multiplier = Character.getNumericValue(userInput.charAt(counter1));
+                    final int multiplier = 
+                    Character.getNumericValue(userInput.charAt(counter1));
                     for (int counter2 = 0; counter2 < multiplier; counter2++) {
                         // Appends characters to a new string
                         // the same amount of times as the digit before it
