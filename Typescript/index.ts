@@ -1,5 +1,5 @@
 /*
-* This program blows up a string into letters
+* This program blows up a string into letters.
 *
 * By:      Kenny Le
 * Version: 1.0
@@ -9,7 +9,7 @@
 import { createPrompt } from 'bun-promptx'
 
 // Function determines whether a chracter represets a digit
-function isDigit(checkCharacter) {
+function isDigit(checkCharacter: string): boolean {
   return !isNaN(parseInt(checkCharacter));
 }
 
