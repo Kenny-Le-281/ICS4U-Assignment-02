@@ -9,34 +9,34 @@
 import { createPrompt } from 'bun-promptx'
 
 // Function determines whether a chracter represets a digit
-function isDigit(char) {
-  return !isNaN(parseInt(char))
+function isDigit(checkCharacter: string): boolean {
+  return !isNaN(parseInt(checkCharacter));
 }
 
 function blowUp(userInput) {
-    let blownUpString = ""
+  let blownUpString = ""
 
-    for (let counter1 = 0; counter1 < userInput.length; counter1++) {
-        // Checks if value is a digit
-        if (isDigit(userInput[counter1])) {
-          // Checks if next digit is also a number
-          if (isDigit(userInput[counter1 + 1])) { 
-            // If yes it ignores the previous number
-            continue 
-          } else {
-            // Multiplies letters by their respected values
-            let mulitplier = parseInt(userInput[counter1])
-            for (let counter2 = 0; counter2 < mulitplier; counter2++) {
-              // Appends characters to a new string 
-              // the same amount of times as the digit before it
-              blownUpString += userInput[counter1 + 1] 
-            }
+  for (let counter1 = 0; counter1 < userInput.length; counter1++) {
+    // Checks if value is a digit
+    if (isDigit(userInput[counter1])) {
+      // Checks if next digit is also a number
+      if (isDigit(userInput[counter1 + 1])) { 
+        // If yes it ignores the previous number
+          continue 
+        } else {
+        // Multiplies letters by their respected values
+        let mulitplier = parseInt(userInput[counter1])
+          for (let counter2 = 0; counter2 < mulitplier; counter2++) {
+          // Appends characters to a new string 
+          // the same amount of times as the digit before it
+          blownUpString += userInput[counter1 + 1] 
           }
-        } else { 
+        }
+      } else { 
         // If value isn't a digit, go to the next value
         continue
-        }
       }
+    }
     return blownUpString
 }
 
