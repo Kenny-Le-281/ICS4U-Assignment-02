@@ -32,7 +32,7 @@ final class Main {
      * @return The blown up string
      */
     public static String blowUp(String userInput) {
-        StringBuilder final blownUpString = new StringBuilder();
+        final StringBuilder blownUpString = new StringBuilder();
 
         for (int counter1 = 0; counter1 < userInput.length(); counter1++) {
             // Checks to see if the specific character is a digit
