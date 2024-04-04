@@ -35,7 +35,7 @@ public class Main {
         StringBuilder blownUpString = new StringBuilder();
 
         for (int counter1 = 0; counter1 < userInput.length(); counter1++) {
-            // Checks if value is a digit
+            // Checks the specific character at the counter to see if it's a digit
             if (isDigit(userInput.charAt(counter1))) {
                 // Checks if next character is also a number
                 if (counter1 + 1 < userInput.length() && isDigit(userInput.charAt(counter1 + 1))) {
