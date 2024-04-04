@@ -34,7 +34,7 @@ function blowUp(userInput) {
           }
         } else { 
         // If value isn't a digit, go to the next value
-        continue 
+        continue;
         }
       }
     return blownUpString
