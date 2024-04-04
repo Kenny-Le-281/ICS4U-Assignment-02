@@ -53,7 +53,7 @@ public class Main {
             } else {
                 // If value isn't a digit, append it to the new string
                 // blownUpString.append(userInput.charAt(i));
-                continue
+                continue;
             }
         }
         return blownUpString.toString();
