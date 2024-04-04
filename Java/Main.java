@@ -16,6 +16,18 @@ import java.util.Scanner;
  */
 final class Main {
     /**
+    * Prevent instantiation.
+    * Throw an exception IllegalStateException.
+    * if this is ever called.
+    *
+    * @throws IllegalStateException if this is ever called.
+    *
+    */
+private Main() {
+    throw new IllegalStateException("Cannot be instantiated");
+}
+
+    /**
      * Determines whether a character represents a digit.
      *
      * @param checkCharacter The character to check
@@ -44,8 +56,8 @@ final class Main {
                     continue;
                 } else {
                     // Multiplies letters by the digit
-                    final int multiplier = 
-                    Character.getNumericValue(userInput.charAt(counter1));
+                    final int multiplier =
+                        Character.getNumericValue(userInput.charAt(counter1));
                     for (int counter2 = 0; counter2 < multiplier; counter2++) {
                         // Appends characters to a new string
                         // the same amount of times as the digit before it
