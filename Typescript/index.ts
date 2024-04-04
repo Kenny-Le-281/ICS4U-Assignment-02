@@ -22,22 +22,22 @@ function blowUp(userInput) {
       // Checks if next digit is also a number
       if (isDigit(userInput[counter1 + 1])) { 
         // If yes it ignores the previous number
-          continue 
-        } else {
+        continue 
+      } else {
         // Multiplies letters by their respected values
         let mulitplier = parseInt(userInput[counter1])
-          for (let counter2 = 0; counter2 < mulitplier; counter2++) {
+        for (let counter2 = 0; counter2 < mulitplier; counter2++) {
           // Appends characters to a new string 
           // the same amount of times as the digit before it
           blownUpString += userInput[counter1 + 1] 
-          }
         }
-      } else { 
-        // If value isn't a digit, go to the next value
-        continue
       }
+    } else { 
+      // If value isn't a digit, go to the next value
+      continue
     }
-    return blownUpString
+  }
+  return blownUpString
 }
 
 
