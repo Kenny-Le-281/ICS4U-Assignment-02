@@ -34,25 +34,26 @@ public class Main {
     public static String blowUp(String userInput) {
         StringBuilder blownUpString = new StringBuilder();
 
-        for (int i = 0; i < userInput.length(); i++) {
+        for (int counter1 = 0; counter1 < userInput.length(); counter1++) {
             // Checks if value is a digit
-            if (isDigit(userInput.charAt(i))) {
+            if (isDigit(userInput.charAt(counter1))) {
                 // Checks if next character is also a number
-                if (i + 1 < userInput.length() && isDigit(userInput.charAt(i + 1))) {
+                if (counter1 + 1 < userInput.length() && isDigit(userInput.charAt(counter1 + 1))) {
                     // If yes, ignore the previous number
                     continue;
                 } else {
                     // Multiplies letters by their respected values
-                    int multiplier = Character.getNumericValue(userInput.charAt(i));
-                    for (int j = 0; j < multiplier; j++) {
+                    int multiplier = Character.getNumericValue(userInput.charAt(counter1));
+                    for (int counter2 = 0; j < multiplier; counter2++) {
                         // Appends characters to a new string 
                         // the same amount of times as the digit before it
-                        blownUpString.append(userInput.charAt(i + 1));
+                        blownUpString.append(userInput.charAt(counter1 + 1));
                     }
                 }
             } else {
                 // If value isn't a digit, append it to the new string
-                blownUpString.append(userInput.charAt(i));
+                // blownUpString.append(userInput.charAt(i));
+                continue
             }
         }
         return blownUpString.toString();
