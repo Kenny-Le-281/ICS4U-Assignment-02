@@ -9,7 +9,7 @@
 import { createPrompt } from 'bun-promptx'
 
 // Function determines whether a chracter represets a digit
-function isDigit(checkCharacter: string): boolean {
+function isDigit(checkCharacter) {
   return !isNaN(parseInt(checkCharacter));
 }
 
