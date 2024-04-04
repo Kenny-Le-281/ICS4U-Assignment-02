@@ -44,7 +44,7 @@ public class Main {
                 } else {
                     // Multiplies letters by their respected values
                     int multiplier = Character.getNumericValue(userInput.charAt(counter1));
-                    for (int counter2 = 0; j < multiplier; counter2++) {
+                    for (int counter2 = 0; counter2 < multiplier; counter2++) {
                         // Appends characters to a new string 
                         // the same amount of times as the digit before it
                         blownUpString.append(userInput.charAt(counter1 + 1));
