@@ -36,7 +36,7 @@ public class Main {
 
         for (int counter1 = 0; counter1 < userInput.length(); counter1++) {
             // Checks if value is a digit
-            if (isDigit(userInput(counter1))) {
+            if (isDigit(userInput.charAt(counter1))) {
                 // Checks if next character is also a number
                 if (counter1 + 1 < userInput.length() && isDigit(userInput.charAt(counter1 + 1))) {
                     // If yes, ignore the previous number
@@ -47,7 +47,7 @@ public class Main {
                     for (int counter2 = 0; counter2 < multiplier; counter2++) {
                         // Appends characters to a new string 
                         // the same amount of times as the digit before it
-                        blownUpString.append(userInput(counter1 + 1));
+                        blownUpString.append(userInput.charAt(counter1 + 1));
                     }
                 }
             } else {
