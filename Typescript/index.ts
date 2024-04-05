@@ -25,12 +25,13 @@ function blowUp(userInput) {
         continue 
       } else {
         // Multiplies letters by their respected values
-        let mulitplier = parseInt(userInput[counter1])
-        for (let counter2 = 0; counter2 < mulitplier; counter2++) {
+        let multiplier = parseInt(userInput[counter1])
+        for (let counter2 = 0; counter2 < multiplier; counter2++) {
           // Appends characters to a new string 
           // the same amount of times as the digit before it
           blownUpString += userInput[counter1 + 1] 
         }
+        continue
       }
     } else { 
       // If value isn't a digit, go to the next value
