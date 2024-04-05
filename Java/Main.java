@@ -23,9 +23,9 @@ final class Main {
     * @throws IllegalStateException if this is ever called.
     *
     */
-private Main() {
-    throw new IllegalStateException("Cannot be instantiated");
-}
+    private Main() {
+        throw new IllegalStateException("Cannot be instantiated");
+    }
 
     /**
      * Determines whether a character represents a digit.
